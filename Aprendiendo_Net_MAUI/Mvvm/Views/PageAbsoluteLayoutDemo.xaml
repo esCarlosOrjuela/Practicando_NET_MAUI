@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aprendiendo_Net_MAUI.Mvvm.Views.PageAbsoluteLayoutDemo"
+             Title="PageAbsoluteLayoutDemo">
+    <AbsoluteLayout>
+        <!--AbsoluteLayout.LayoutBounds="x,y,WidthRequest, HeightRequest"-->
+        <!--Ejemplo
+            AbsoluteLayout.LayoutBounds="0,300,100,10"
+        -->
+        <!--AbsoluteLayout.LayoutFlags: ayuda a definir un valor proporcional en % de x, y, WidthRequest, y el HeightRequest o de alguna de estas caracteristicas -->
+        <!--Ejemplo
+            AbsoluteLayout.LayoutBounds=".5,.5,.5,.5"
+            AbsoluteLayout.LayoutFlags="SizeProportional, XProportional, YProportional"/> => este puede ser uno o vario: AbsoluteLayout.LayoutFlags="SizeProportional"
+            AbsoluteLayout.LayoutFlags="SizeProportional, XProportional, YProportional" ==  AbsoluteLayout.LayoutFlags="All"
+        -->
+        <Button
+            Text="Button 1"
+            AbsoluteLayout.LayoutBounds=".5,.5,.5,.5"
+            AbsoluteLayout.LayoutFlags="All"/>
+        <Button Text="Button 2"  />
+    </AbsoluteLayout>
+</ContentPage>

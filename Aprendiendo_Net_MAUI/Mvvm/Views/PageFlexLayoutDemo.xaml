@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aprendiendo_Net_MAUI.Mvvm.Views.PageFlexLayoutDemo"
+             Title="PageFlexLayoutDemo">
+
+    <!--
+    Ejemplo Base:
+    <FlexLayout Direction="Row" AlignItems="Center" >
+        <Button Text="Button 1" />
+        <Button Text="Button 2" />
+        <Button Text="Button 3" />
+        <Button Text="Button 4" />
+    </FlexLayout>
+
+    Ejemplo con mas caracteristicas:
+    -->
+    <!--Header-->
+    <FlexLayout Direction="Column">
+        <Label
+            Text="Header"
+            FontSize="18"
+            BackgroundColor="Aqua"
+            HorizontalTextAlignment="Center"
+            />
+        <!--Body-->
+        <FlexLayout FlexLayout.Grow="1">
+            <!--Content-->
+            <Label
+                FontSize="18"
+                Text="Contents"
+                TextColor="White"
+                FlexLayout.Grow="1"
+                FlexLayout.Order="1"
+                BackgroundColor="Gray"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                />
+            <BoxView
+                Color="Blue"
+                FlexLayout.Order="0"
+                FlexLayout.Basis="90"
+                />
+
+            <BoxView
+                Color="Green"
+                FlexLayout.Order="2"
+                FlexLayout.Basis="50"
+                />
+        </FlexLayout>
+        <!--Footer-->
+        <Label
+            FontSize="18"
+            Text="Footer"
+            TextColor="DarkSlateGray"
+            BackgroundColor="Pink"
+            VerticalTextAlignment="Center"
+            HorizontalTextAlignment="Center"
+            />
+    </FlexLayout>
+</ContentPage>
