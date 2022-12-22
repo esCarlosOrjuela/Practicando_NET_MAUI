@@ -86,5 +86,14 @@
 	  <MauiXaml Update="Mvvm\Views\PagePresentationControlsDemo.xaml">
 	    <SubType></SubType>
 	  </MauiXaml>
+	  <MauiXaml Update="Mvvm\Views\PageCommandsControlsDemo.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="Mvvm\Views\PageActivityControlsDemo.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="Mvvm\Views\PageCollectionsControlsDemo.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
 	</ItemGroup>
 </Project>

@@ -3,10 +3,65 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Aprendiendo_Net_MAUI.Mvvm.Views.PagePresentationControlsDemo"
              Title="PagePresentationControlsDemo">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ScrollView VerticalScrollBarVisibility="Always">
+        <VerticalStackLayout Padding="27" Spacing="27">
+            <BoxView BackgroundColor="Black" HeightRequest="50" />
+            <Label Padding="27" FontSize="Subtitle" Text="NET MAI" HorizontalTextAlignment="Center" />
+            <Ellipse Fill="DarkRed" Stroke="DarkGreen" StrokeThickness="8" HeightRequest="200" HorizontalOptions="Center" WidthRequest="200" />
+            <Line Stroke="Black" X1="0" Y1="0" X2="100" Y2="50" StrokeThickness="10" />
+            <Line X1="40" Y1="10" X2="10" Y2="120" Stroke="DarkBlue" StrokeDashArray="1,1" StrokeDashOffset="6" />
+            <Rectangle Margin="27" Fill="DarkRed" Stroke="Green" StrokeThickness="8" HeightRequest="50" WidthRequest="150" HorizontalOptions="End" RadiusX="10" RadiusY="10" />
+            <Polygon Fill="DarkGreen" Points="40,10 70,80 10,50" />
+            <Polygon Points="40,10 70,80 10,50"
+             Fill="AliceBlue"
+             Stroke="Green"
+             StrokeThickness="5"
+             StrokeDashArray="1,1"
+             StrokeDashOffset="6" />
+
+            <Polygon
+                 Points="0 48, 0 144, 96 150, 100 0, 192 0, 192 96, 50 96, 48 192, 150 200 144 48"
+                 Margin="27"
+                 Fill="Blue"
+                 Stroke="Red"
+                 StrokeThickness="3" />
+
+            <Polyline Points="0,0 10,30 15,0 18,60 23,30 35,30 40,0 43,60 48,30 100,30"
+                      Stroke="Red" />
+
+            <Polyline Points="0,0 10,30 15,0 18,60 23,30 35,30 40,0 43,60 48,30 100,30"
+                      Stroke="Red"
+                      HorizontalOptions="Center"
+                      StrokeThickness="2"
+                      StrokeDashArray="1,1"
+                      StrokeDashOffset="6" />
+
+            <Path Data="M 10,100 L 100,100 100,50Z"
+                  Stroke="Black"
+                  Aspect="Uniform"
+                  HorizontalOptions="Start" />
+
+            <Border StrokeThickness="4"
+                    StrokeShape="RoundRectangle 40,0,0,40"
+                    Background="#2B0B98"
+                    Padding="16,8"
+                    HorizontalOptions="Center">
+                <Border.Stroke>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="Orange"
+                                      Offset="0.1" />
+                        <GradientStop Color="Brown"
+                                      Offset="1.0" />
+                    </LinearGradientBrush>
+                </Border.Stroke>
+                <Label Text=".NET MAUI"
+                       TextColor="White"
+                       FontSize="18"
+                       FontAttributes="Bold" />
+            </Border>
+
+            <Image Source="dotnet_bot" Aspect="AspectFit" HeightRequest="300" WidthRequest="300"  />
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

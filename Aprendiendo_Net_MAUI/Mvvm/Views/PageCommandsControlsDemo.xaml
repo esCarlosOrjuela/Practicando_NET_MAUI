@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aprendiendo_Net_MAUI.Mvvm.Views.PageCommandsControlsDemo"
+             Title="PageCommandsControlsDemo">
+    <ScrollView>
+
+        <VerticalStackLayout>
+            <ImageButton Source="dotnet_bot" Clicked="Button_Clicked" HeightRequest="150" />
+            <Button Margin="27" Text="Click Me!" Clicked="Button_Clicked" />
+
+            <RadioButton CheckedChanged="RadioButton_CheckedChanged" Content="  Option 1" />
+            <RadioButton GroupName="Group1" CheckedChanged="RadioButton_CheckedChanged" Content="  Option 2" />
+            <RadioButton GroupName="Group1" CheckedChanged="RadioButton_CheckedChanged" Content="  Option 3" />
+            <RadioButton GroupName="Group2" CheckedChanged="RadioButton_CheckedChanged" Content="  Option 4" />
+            <RadioButton GroupName="Group2" CheckedChanged="RadioButton_CheckedChanged" Content="  Option 5" />
+            <RadioButton GroupName="Group2" CheckedChanged="RadioButton_CheckedChanged" Content="  Option 6" />
+
+            <SearchBar Margin="0,27" SearchButtonPressed="SearchBar_SearchButtonPressed" BackgroundColor="WhiteSmoke" />
+
+            <SwipeView Margin="0,27">
+                <SwipeView.LeftItems>
+                    <SwipeItems>
+                        <SwipeItem
+                            Text="Delete"
+                            IconImageSource="dotnet_bot"
+                            BackgroundColor="LightPink"
+                            Invoked="SwipeItem_Invoked" />
+                    </SwipeItems>
+                </SwipeView.LeftItems>
+                <SwipeView.RightItems>
+                    <SwipeItems>
+                        <SwipeItem
+                            Text="Favorite"
+                            IconImageSource="dotnet_bot"
+                            BackgroundColor="LightGreen"
+                            Invoked="SwipeItem_Invoked" />
+                        <SwipeItem
+                            Text="Share"
+                            IconImageSource="dotnet_bot"
+                            BackgroundColor="LightYellow"
+                            Invoked="SwipeItem_Invoked" />
+                    </SwipeItems>
+                </SwipeView.RightItems>
+                <!-- Content -->
+                <Grid
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="LightGray">
+                    <Label Text="Swipe right"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                </Grid>
+            </SwipeView>
+
+            <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                <Label Text="Check Me!" VerticalOptions="Center" />
+                <CheckBox x:Name="checkBox" VerticalOptions="Center" />
+            </HorizontalStackLayout>
+            <Label Padding="27,0" Text="Lorem ipsum dolor sit amet, elit rutrum, enim hendrerit augue vitae praesent sed non, lorem aenean quis praesent pede.">
+                <Label.Triggers>
+                    <DataTrigger TargetType="Label"
+                                 Binding="{Binding Source={x:Reference checkBox}, Path=IsChecked}"
+                                 Value="true">
+                        <Setter Property="FontAttributes"
+                                Value="Italic, Bold" />
+                        <Setter Property="FontSize"
+                                 Value="18" />
+                    </DataTrigger>
+                </Label.Triggers>
+            </Label>
+
+            <VerticalStackLayout Margin="0,27">
+                <Label x:Name="rotatingLabel"
+                       Text="ROTATING TEXT"
+                       FontSize="18"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <Slider Maximum="360"
+                        ValueChanged="Slider_ValueChanged" />
+                <Label x:Name="displayLabel"
+                       Text="(uninitialized)"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Margin="20">
+                <Label x:Name="_rotatingLabel"
+                       Text="ROTATING TEXT"
+                       FontSize="18"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <Stepper Maximum="360"
+                         Increment="30"
+                         HorizontalOptions="Center"
+                         ValueChanged="Stepper_ValueChanged" />
+                <Label x:Name="_displayLabel"
+                       Text="(uninitialized)"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+            </VerticalStackLayout>
+
+            <Switch
+                  Margin="0,27"
+                  HorizontalOptions="Center"
+                  OnColor="Orange"
+                  ThumbColor="Green" />
+
+            <Switch IsToggled="True" Margin="0,27"
+                  HorizontalOptions="Center">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="On">
+                            <VisualState.Setters>
+                                <Setter Property="ThumbColor"
+                            Value="MediumSpringGreen" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Off">
+                            <VisualState.Setters>
+                                <Setter Property="ThumbColor"
+                            Value="Red" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+            </Switch>
+
+            <VerticalStackLayout Margin="27">
+                <Switch x:Name="styleSwitch" HorizontalOptions="CenterAndExpand" />
+                <Label Text="Lorem ipsum dolor sit amet, elit rutrum, enim hendrerit augue vitae praesent sed non, lorem aenean quis praesent pede.">
+                    <Label.Triggers>
+                        <DataTrigger TargetType="Label"
+                     Binding="{Binding Source={x:Reference styleSwitch}, Path=IsToggled}"
+                     Value="true">
+                            <Setter Property="FontAttributes"
+                    Value="Italic, Bold" />
+                            <Setter Property="FontSize"
+                    Value="18" />
+                        </DataTrigger>
+                    </Label.Triggers>
+                </Label>
+            </VerticalStackLayout>
+
+            <Entry Placeholder="Ingresa texto"
+                   PlaceholderColor="Green"
+                   IsPassword="True"
+                   Keyboard="Numeric"
+                   TextChanged="Entry_TextChanged"
+                   Completed="Entry_Completed" />
+
+            <Editor Margin="0,27"
+                    AutoSize="TextChanges"
+                    BackgroundColor="WhiteSmoke" />
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+
+</ContentPage>
