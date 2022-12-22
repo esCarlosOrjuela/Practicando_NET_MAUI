@@ -57,12 +57,14 @@
 	  <None Remove="Mvvm\Views\" />
 	  <None Remove="Mvvm\Models\" />
 	  <None Remove="Mvvm\ViewModels\" />
+	  <None Remove="Mvvm\Views\Demo\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Mvvm\" />
 	  <Folder Include="Mvvm\Views\" />
 	  <Folder Include="Mvvm\Models\" />
 	  <Folder Include="Mvvm\ViewModels\" />
+	  <Folder Include="Mvvm\Views\Demo\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiXaml Update="Mvvm\Views\PageDemo.xaml">
