@@ -50,6 +50,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+		<PackageReference Include="CommunityToolkit.Maui" Version="3.1.0" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -58,6 +59,10 @@
 	  <None Remove="Mvvm\Models\" />
 	  <None Remove="Mvvm\ViewModels\" />
 	  <None Remove="Mvvm\Views\Demo\" />
+	  <None Remove="Mvvm\Views\Practica_ColorMaker\" />
+	  <None Remove="Resources\Images\icon_copy.svg" />
+	  <None Remove="CommunityToolkit.Maui" />
+	  <None Remove="Mvvm\Views\BlazorDemo\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Mvvm\" />
@@ -65,36 +70,41 @@
 	  <Folder Include="Mvvm\Models\" />
 	  <Folder Include="Mvvm\ViewModels\" />
 	  <Folder Include="Mvvm\Views\Demo\" />
+	  <Folder Include="Mvvm\Views\Practica_ColorMaker\" />
+	  <Folder Include="Mvvm\Views\BlazorDemo\" />
 	</ItemGroup>
 	<ItemGroup>
-	  <MauiXaml Update="Mvvm\Views\PageDemo.xaml">
-	    <SubType></SubType>
-	  </MauiXaml>
-	  <MauiXaml Update="Mvvm\Views\PageFlyoutDemo.xaml">
-	    <SubType></SubType>
-	  </MauiXaml>
-	  <MauiXaml Update="Mvvm\Views\PageTabbedDemo.xaml">
-	    <SubType></SubType>
-	  </MauiXaml>
-	  <MauiXaml Update="Mvvm\Views\PageStackLayoutDemo.xaml">
-	    <SubType></SubType>
-	  </MauiXaml>
 	  <MauiXaml Update="Mvvm\Views\PageAbsoluteLayoutDemo.xaml">
 	    <SubType></SubType>
 	  </MauiXaml>
-	  <MauiXaml Update="Mvvm\Views\PageFlexLayoutDemo.xaml">
+	  <MauiXaml Condition=" '$(EnableDefaultXamlItems)' == 'true' " Update="Mvvm\Views\Demo\PageActivityControlsDemo.xaml">
 	    <SubType></SubType>
 	  </MauiXaml>
-	  <MauiXaml Update="Mvvm\Views\PagePresentationControlsDemo.xaml">
+	  <MauiXaml Condition=" '$(EnableDefaultXamlItems)' == 'true' " Update="Mvvm\Views\Demo\PageCollectionsControlsDemo.xaml">
 	    <SubType></SubType>
 	  </MauiXaml>
-	  <MauiXaml Update="Mvvm\Views\PageCommandsControlsDemo.xaml">
+	  <MauiXaml Condition=" '$(EnableDefaultXamlItems)' == 'true' " Update="Mvvm\Views\Demo\PageCommandsControlsDemo.xaml">
 	    <SubType></SubType>
 	  </MauiXaml>
-	  <MauiXaml Update="Mvvm\Views\PageActivityControlsDemo.xaml">
+	  <MauiXaml Condition=" '$(EnableDefaultXamlItems)' == 'true' " Update="Mvvm\Views\Demo\PageDemo.xaml">
 	    <SubType></SubType>
 	  </MauiXaml>
-	  <MauiXaml Update="Mvvm\Views\PageCollectionsControlsDemo.xaml">
+	  <MauiXaml Condition=" '$(EnableDefaultXamlItems)' == 'true' " Update="Mvvm\Views\Demo\PageFlexLayoutDemo.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
+	  <MauiXaml Condition=" '$(EnableDefaultXamlItems)' == 'true' " Update="Mvvm\Views\Demo\PageFlyoutDemo.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
+	  <MauiXaml Condition=" '$(EnableDefaultXamlItems)' == 'true' " Update="Mvvm\Views\Demo\PagePresentationControlsDemo.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
+	  <MauiXaml Condition=" '$(EnableDefaultXamlItems)' == 'true' " Update="Mvvm\Views\Demo\PageStackLayoutDemo.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
+	  <MauiXaml Condition=" '$(EnableDefaultXamlItems)' == 'true' " Update="Mvvm\Views\Demo\PageTabbedDemo.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="Mvvm\Views\Practica_ColorMaker\MainPage.xaml">
 	    <SubType></SubType>
 	  </MauiXaml>
 	</ItemGroup>
