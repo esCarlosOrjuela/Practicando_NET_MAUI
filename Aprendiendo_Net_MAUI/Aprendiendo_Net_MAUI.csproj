@@ -62,7 +62,7 @@
 	  <None Remove="Mvvm\Views\Practica_ColorMaker\" />
 	  <None Remove="Resources\Images\icon_copy.svg" />
 	  <None Remove="CommunityToolkit.Maui" />
-	  <None Remove="Mvvm\Views\BlazorDemo\" />
+	  <None Remove="Mvvm\Views\Informacion_Propinas\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Mvvm\" />
@@ -71,7 +71,7 @@
 	  <Folder Include="Mvvm\ViewModels\" />
 	  <Folder Include="Mvvm\Views\Demo\" />
 	  <Folder Include="Mvvm\Views\Practica_ColorMaker\" />
-	  <Folder Include="Mvvm\Views\BlazorDemo\" />
+	  <Folder Include="Mvvm\Views\Informacion_Propinas\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiXaml Update="Mvvm\Views\PageAbsoluteLayoutDemo.xaml">
@@ -105,6 +105,9 @@
 	    <SubType></SubType>
 	  </MauiXaml>
 	  <MauiXaml Update="Mvvm\Views\Practica_ColorMaker\MainPage.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="Mvvm\Views\Informacion_Propinas\MainPage.xaml">
 	    <SubType></SubType>
 	  </MauiXaml>
 	</ItemGroup>
