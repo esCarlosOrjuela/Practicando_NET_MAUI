@@ -13,7 +13,7 @@ public partial class App : Application
         navigationPage.BarTextColor = Colors.White;
         /// Asignamos el control de navegación como pagina principal de la App
         MainPage = navigationPage;
-        MainPage = new Mvvm.Views.Informacion_Propinas.MainPage();
+        MainPage = new Mvvm.Views.DataBindingDemo.MainPage();
 
     }
 }

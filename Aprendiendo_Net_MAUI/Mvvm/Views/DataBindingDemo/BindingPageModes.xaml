@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aprendiendo_Net_MAUI.Mvvm.Views.DataBindingDemo.BindingPageModes"
+             Title="BindingPageModes">
+    <VerticalStackLayout
+        VerticalOptions="Center" 
+        HorizontalOptions="Center">
+
+        <Entry
+            Text="Initial"
+            x:Name="Source"
+            FontSize="Title"
+            WidthRequest="300"
+            Placeholder="Source"
+            HorizontalOptions="Center"
+            />
+
+        <Entry
+            FontSize="Title"
+            Placeholder="Target"
+            HorizontalOptions="FillAndExpand"
+            Text="{Binding Source={x:Reference Source}, Path=Text, Mode=OneWayToSource}"
+            />
+        <!--
+            Modos Bindig:
+            Defaul: Varia segun el control, por lo ques es mejor definir el comportamiento
+            OneTime: Asigna el valor una unica vez: cuando se inicializa la pagina
+            OneWay: Si el cambio surge en el origen, cambia en el destino. Si el cambio surge en el destino, No cambia el origuen
+            TwoWay: Si el cambio surge en el origen, cambia en el destino y viceversa
+            OneWayToSource: Si el cambio surge en el origen, No cambia en el destino. Si el cambio surge en el destino, cambia el origuen
+        -->
+
+    </VerticalStackLayout>
+</ContentPage>

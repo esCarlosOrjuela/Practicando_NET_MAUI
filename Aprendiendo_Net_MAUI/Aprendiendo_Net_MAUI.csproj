@@ -42,15 +42,19 @@
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
+		<MauiImage Update="Resources\Images\processing.gif" Resize="False" />
 		<MauiFont Include="Resources\Fonts\*" />
+		<MauiImage Update="Resources\Splash\house.svg" BaseSize="800,800" />
 
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 		<PackageReference Include="CommunityToolkit.Maui" Version="3.1.0" />
+		<PackageReference Include="ColorUtility" Version="1.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -63,6 +67,20 @@
 	  <None Remove="Resources\Images\icon_copy.svg" />
 	  <None Remove="CommunityToolkit.Maui" />
 	  <None Remove="Mvvm\Views\Informacion_Propinas\" />
+	  <None Remove="Mvvm\Views\ExternalResourcesDemo\" />
+	  <None Remove="Resources\Images\shoe.jpg" />
+	  <None Remove="Resources\Images\sun.png" />
+	  <None Remove="Resources\Images\processing.gif" />
+	  <None Remove="Resources\Images\house.svg" />
+	  <None Remove="Resources\Fonts\Creamer .ttf" />
+	  <None Remove="Resources\Fonts\fontello.ttf" />
+	  <None Remove="Resources\Raw\data.json" />
+	  <None Remove="Mvvm\Views\CodeQuotes\" />
+	  <None Remove="Resources\Fonts\Bison-Bold%28PersonalUse%29.ttf" />
+	  <None Remove="ColorUtility" />
+	  <None Remove="Resources\Raw\quotes.txt" />
+	  <None Remove="Mvvm\Views\DataBindingDemo\" />
+	  <None Remove="Mvvm\Models\DataBindingDemo\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Mvvm\" />
@@ -72,6 +90,10 @@
 	  <Folder Include="Mvvm\Views\Demo\" />
 	  <Folder Include="Mvvm\Views\Practica_ColorMaker\" />
 	  <Folder Include="Mvvm\Views\Informacion_Propinas\" />
+	  <Folder Include="Mvvm\Views\ExternalResourcesDemo\" />
+	  <Folder Include="Mvvm\Views\CodeQuotes\" />
+	  <Folder Include="Mvvm\Views\DataBindingDemo\" />
+	  <Folder Include="Mvvm\Models\DataBindingDemo\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiXaml Update="Mvvm\Views\PageAbsoluteLayoutDemo.xaml">
@@ -110,5 +132,24 @@
 	  <MauiXaml Update="Mvvm\Views\Informacion_Propinas\MainPage.xaml">
 	    <SubType></SubType>
 	  </MauiXaml>
+	  <MauiXaml Update="Mvvm\Views\ExternalResourcesDemo\MainPage.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="Mvvm\Views\CodeQuotes\MainPage.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="Mvvm\Views\DataBindingDemo\MainPage.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="Mvvm\Views\DataBindingDemo\SliderPage.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="Mvvm\Views\DataBindingDemo\BindingPageModes.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
+	</ItemGroup>
+	<ItemGroup>
+	  <BundleResource Include="Resources\Raw\data.json" />
+	  <BundleResource Include="Resources\Raw\quotes.txt" />
 	</ItemGroup>
 </Project>

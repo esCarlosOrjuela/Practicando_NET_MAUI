@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Models="clr-namespace:Aprendiendo_Net_MAUI.Mvvm.Models.DataBindingDemo"
+             x:Class="Aprendiendo_Net_MAUI.Mvvm.Views.DataBindingDemo.MainPage"
+             Title="MainPage">
+    <ContentPage.Resources>
+        <Models:Person x:Key="myPerson"
+                       Name="Daniel"
+                       Address="Tibana"
+                       Phone="32155555"/>
+    </ContentPage.Resources>
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="5"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Label
+                FontSize="Medium"
+                FontAttributes="Italic"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                Text="Modelo Creado en la Page:"
+                />
+
+            <Label
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                Text="{Binding Name, Source={StaticResource myPerson}}"
+                />
+
+            <Label
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                Text="{Binding Address, Source={StaticResource myPerson}}"
+                />
+
+            <Label
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                Text="{Binding Phone, Source={StaticResource myPerson}}"
+                />
+
+
+            <Label
+                Margin="0,20,0,0"
+                FontSize="Medium"
+                FontAttributes="Italic"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Text="Modelo Creado en el CodeBehin del la Page, con el Boton:"
+                />
+
+            <Label
+                x:Name="txtName"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                />
+
+            <Label
+                x:Name="txtPhone"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                />
+
+            <Label
+                x:Name="txtAddress"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                />
+
+            <Button
+                Margin="0,15"
+                Text="Click here"
+                Clicked="Button_Clicked"
+                />
+
+
+            <Label
+                Margin="0,20,0,0"
+                FontSize="Medium"
+                FontAttributes="Italic"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Text="Modelo Creado en el CodeBehin del la Page, con el Boton, Usando el BindingContex:"
+                />
+
+
+            <Label
+                x:Name="txtName2"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                Text="{Binding Name}"
+                />
+
+            <Label
+                x:Name="txtPhone2"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                Text="{Binding Address}"
+                />
+
+            <Label
+                x:Name="txtAddress2"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                Text="{Binding Phone}"
+                />
+
+            <Entry
+                WidthRequest="200"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                Text="{Binding Name}"
+                />
+
+            <Entry
+                WidthRequest="200"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                Text="{Binding Address}"
+                />
+
+            <Entry
+                WidthRequest="200"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                Text="{Binding Phone}"
+                />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

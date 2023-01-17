@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aprendiendo_Net_MAUI.Mvvm.Views.ExternalResourcesDemo.MainPage"
+             Title="MainPage">
+    <ScrollView>
+        <VerticalStackLayout>
+
+            <VerticalStackLayout Padding="40" BackgroundColor="DarkSlateGray">
+                <Label FontSize="30"
+                       TextColor="White"
+                       Text="this is a font test" />
+
+                <Label FontSize="30"
+                       TextColor="White"
+                       FontFamily="Creamer"
+                       FontAttributes="Bold,Italic"
+                       Text="this is a font test" />
+
+                <Image>
+                    <Image.Source>
+                        <FontImageSource FontFamily="FontelloIcon" Glyph="&#xE832;" Size="60" />
+                    </Image.Source>
+                </Image>
+
+            </VerticalStackLayout>
+
+            <Image Source="shoe.jpg" />
+            <Image Source="sun.png" HeightRequest="350" />
+            <Image Source="processing.gif" IsAnimationPlaying="True" />
+            <Image Source="house"  />
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+</ContentPage>
